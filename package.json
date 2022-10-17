@@ -18,8 +18,12 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "husky-install": "husky install"
+    "deploy": "gh-pages -d build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run deploy"
+    }
   },
   "eslintConfig": {
     "extends": [
